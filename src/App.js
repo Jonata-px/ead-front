@@ -1,16 +1,20 @@
 
-import './App.css';
-import Header from './views/Header';
-import Footer from './views/Footer';
+import './static/style/index.css';
+import {BrowserRouter as Router} from "react-router-dom";
 
-function App() {
+// import 'react-native-gesture-handler'; // primeiro
+import React from 'react';
+
+import { AuthProvider } from './contexts/authContext';
+import Routes from './routes';
+
+export default function App() {
+
   return (
-    <div className="App">
-      <Header className="App-header"/>
-        <h2>Conteudo do site</h2>
-      <Footer/>
-    </div>
+    <Router>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </Router>
   );
 }
-
-export default App;

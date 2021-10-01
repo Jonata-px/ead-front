@@ -1,0 +1,244 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: 'Merriweather', serif; */
+    font-family: 'Lato', sans-serif;
+}
+
+html, body, #root{
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --input-border:#f3a60c;
+    --input-border-hover:#c78500;
+    --back-log:#52006a;
+    --button-border:#0fcf7b;
+    --save:#32cd32;
+    --save-hover:#19ac19;
+    --titulo:#52006a;
+    --titulo-opacity:#51006a8e;
+}
+
+.container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+img{
+    display: block;
+    max-width:100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color:var(--back-log)
+}
+
+.loading img{
+    max-width:140px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+header{
+    width: 100%;
+}
+
+header .container{
+    background-color: var(--back-log);
+    display:flex;
+    border-radius: 0 0 10px 10px;
+    padding: 15px 25px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a{
+    font-size:30px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+
+header form{
+    width: 100%;
+    max-width: 500px;
+    margin: 0 15px;
+    position: relative;
+}
+
+header input[type=search]{
+    width: 100%;
+    height: 40px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+    /* border: 2px solid var(--input-border); */
+    font-weight: 900;
+}
+
+header form button{
+    position: absolute;
+    left: 0;
+    top:50%;
+    transform: translateY(-50%);
+    border: 0; 
+    background-color: transparent;
+    border-radius:10px 0 0 10px;
+    outline: 0;
+}
+
+header form button:hover svg{
+    color: var(--save);
+}
+
+header form svg{
+    width: 40px;
+    height: 34px;
+    padding:3px;
+    vertical-align: middle;
+    color: rgb(41, 41, 41);
+}
+
+.user-header{
+    display:flex;
+    align-items: center;
+    position: relative;
+}
+
+.user-header h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.user-header svg{
+    font-size: 40px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.user-header svg:hover{
+    transform:scale(1.07);
+}
+
+.user-opsoes-header{
+    /* width: 150px; */
+    position:absolute;
+    border:2px solid #bababa;
+    background-color:white;
+    padding:10px 35px;
+    right:0;
+    top:40px;
+    border-radius: 5px;
+    text-align:center;
+    display: none;
+    z-index: 999;
+}
+
+.user-opsoes-header h4{
+    display: none;
+    color: var(--input-border);
+    font-size:20px;
+}
+
+.user-opsoes-header button {
+    border:2px solid #d4d4d4;
+    background-color: transparent;
+    border-radius:15px;
+    outline: 0;
+    padding: 3px 10px;
+    white-space: nowrap;
+    font-size:18px;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: bolder;
+    color: #666666;
+}
+
+.user-opsoes-header button:hover{
+    color: rgb(41, 41, 41);
+    border-color:rgb(41, 41, 41);
+}
+
+
+
+@media screen and (max-width:768px){
+    
+    header .container{
+        padding: 10px 25px;
+    }
+    header .logo a{
+        font-size:22px;
+    }
+
+    header input[type=search]{
+        height: 33px;
+        border-radius: 7px;
+        padding-left: 40px;
+        font-size: 18px;
+    }
+
+    .user-header h3{
+        display: none;
+    }
+
+    .user-header h4{
+        display: block;
+    }
+
+    .user-header svg{
+        margin-left: 10px;
+    }
+
+}
+
+@media screen and (max-width:426px){
+    header .container{
+        flex-wrap: wrap;
+    }
+    header form{
+        width: 100%;
+        order: 3;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .user-opsoes-header h4{
+        font-size:18px;
+    }
+    
+    .user-opsoes-header button {
+        border:1px solid #d4d4d4;
+        font-size:16px;
+        margin-top: 7px;
+    }
+}
+    
+
+  
+  

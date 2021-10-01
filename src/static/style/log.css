@@ -1,0 +1,136 @@
+.log{
+    position: fixed;
+    left:0;
+    top:0;
+    border-top: 10px solid var(--input-border);
+    background-color: var(--back-log);
+    width: 100%;
+    height: 100%;
+}
+
+.log .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width:450px;
+    color: white;
+    text-align:center;
+}
+
+.log h2{
+    font-size:40px;
+}
+
+.log form{
+    width: 100%;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    padding: 10px 0;
+    margin:10px 0;
+}
+
+.log form input::placeholder{
+    color:rgba(255, 255, 255, 0.863);
+}
+
+.log input{
+    background-color:transparent;
+    color:rgb(255, 255, 255);
+    border: 2px solid var(--input-border);
+    font-weight: 400;
+    outline: 0;
+    font-size:20px;
+    width: 100%;
+    text-align: center;
+    border-radius:15px;
+    padding:5px 15px;
+    height: 48px;
+}
+
+.log input[type=password]{
+    margin-top:20px;
+}
+
+.log input[type=text]{
+    margin-bottom:20px;
+}
+
+.log input[type=checkbox]{
+    width: auto ;
+    margin: 10px 10px 15px 0;
+    cursor: pointer;
+    height: auto;
+}
+
+.log form a{
+    display: block;
+    margin:0 auto;
+    color: white;
+    font-size:15px;
+    padding:4px 0 10px 0;
+}
+
+.log form a:hover, form label:hover{
+    cursor: pointer;
+    color: var(--button-border);
+}
+
+.log form button{
+    display: block;
+    margin:0 auto;
+    background-color:transparent;
+    color:rgb(255, 255, 255);
+    border: 2px solid var(--button-border);
+    font-weight: 600;
+    outline: 0;
+    font-size:20px;
+    text-align: center;
+    border-radius:15px;
+    padding:8px 25px;
+    text-transform: uppercase;
+    margin-bottom:10px ;
+}
+
+.log form button:hover{
+    border-color: var(--save);
+}
+
+.log form h4{
+    font-size:14px;
+    font-weight: lighter;
+}
+
+.log form h4 span{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+
+.log form h4 span:hover{
+    color: var(--button-border);
+}
+
+.btn-google{
+    border: 2px solid white;
+    padding: 5px 0;
+    font-weight: 400;
+    outline: 0;
+    margin-bottom:10px ;
+    font-size:17px;
+    text-align: center;
+    border-radius:15px;
+    padding:8px 65px;
+    position: relative;
+}
+
+.btn-google:hover{
+    border: 2px solid var(--save);
+}
+
+.btn-google svg{
+    position: absolute;
+    left:10px;
+    top:50%;
+    font-size:30px;
+    transform:translateY(-50%)
+}

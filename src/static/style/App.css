@@ -1,0 +1,623 @@
+.continue{
+    width: 100%;
+    padding:20px 0;
+}
+
+.container h2{
+    color: var(--titulo);
+    font-weight: 600;
+    font-size:30px;
+    margin-bottom: 10px;
+    margin-top:30px;
+}
+
+.continue-wrap{
+    display: inline-block;
+    padding:10px 20px;
+    border: 2px solid #51006a77;
+    border-radius:10px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width:300px;
+}
+
+.continue-wrap h3{
+    font-size: 25px;
+    color: #787878;
+}
+
+/* AREAS */
+
+.areas-warp{
+    padding:30px 0;
+    display:flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.area-ver-mais{
+    position:absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: white;
+    z-index: 99;
+    padding:10px 30px;
+    text-align: center;
+}
+
+.area-ver-mais button{
+    background-color: white;
+    border: 0;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.area-ver-mais button:hover{
+    transform:translateY(-50%) scale(1.05);
+}
+
+.area-ver-mais svg {
+    font-size:40px;
+    color: #e781fc;
+}
+
+.area-ver-mais h1{
+    color: #c1a0fd;
+    white-space: nowrap;
+    font-size:20px;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, #5a26bb);
+    color: black;
+  /* Adicionado: */
+  background-clip: text;
+  -webkit-background-clip: text;
+  /* Adicionado: */
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.areas-warp .materia{
+    width: 180px;
+    height: 140px;
+    padding-top: 20px;
+    padding-bottom:10px;
+    border: 2px solid #51006a5d;
+    border-radius:30px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-position: center;
+    background-size: contain;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.materia .sircle{
+    position: absolute;
+    left: 50%;
+    top: -45px;
+    transform: translate(-50%,50%);
+    width: 45px;
+    height: 45px;
+    border-radius:50%;
+}
+
+.materia a{
+    text-decoration: none;
+}
+
+.materia h3{
+    /* width: 100%; */
+    font-size:22px;
+    margin-bottom: 5px;
+}
+
+.materia h4{
+    font-size:17px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+ .mySwiper{
+     width: 100%;
+ }
+
+
+.swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* overflow: hidden; */
+    list-style: none;
+    padding: 0;
+    /* z-index: 1; */
+}
+.swiper-container{
+    overflow: initial !important;
+}
+
+
+/* AREA ALUNO */
+
+.area-aluno-perfil{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.area-aluno-perfil .perfil-img{
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+.area-aluno-perfil .perfil-img img{
+    border-radius: 50%;
+}
+
+.area-aluno-perfil .perfil-img svg{
+    font-size: 110px;
+}
+
+.perfil-chamada h1{
+    font-size:2.2rem;
+    color: var(--titulo);
+}
+
+.perfil-chamada p{
+    color: var(--titulo);
+    font-size:1.3rem;
+}
+
+.info-user{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info-user-single{
+    width: 50%;
+    padding:15px 0;
+    min-width:240px;
+}
+
+.info-user-single h3{
+    font-size:1.6rem;
+    color:rgb(41, 41, 41);
+    margin-bottom: 10px;
+}
+
+.info-user-single p{
+    font-size:1.4rem;
+    color:var(--titulo);
+    display: inline-block;
+    border-bottom: 2px solid #51006aa8;
+    min-width: 220px;
+    padding-right: 10px;
+}
+
+.adicionar-aula-pro{
+    width: 100%;
+    text-align: center;
+}
+
+.adicionar-aula-pro button{
+    border: 0;
+    background-color:var(--save);
+    font-size: 22px;
+    color: white;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+
+/* MATERIAS */
+
+.materias{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.materia-single{
+    width: 300px;
+    margin: 25px 5px;
+    border: 2px outset var(--titulo-opacity);
+    border-radius: 10px;overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0,0,0);
+}
+
+.materia-info{
+    padding: 7px 10px;
+    color: rgb(78, 78, 78);
+    font-size:15px;
+    background-color: #f0f0f0;
+    height: 100%;
+}
+
+.materia-single .materia-img{
+    height: 150px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.materia-info h1{
+    padding-bottom: 10px;
+    color: rgb(37, 37, 37);
+    font-size:22px;
+}
+
+.materia-info span{
+    color: rgb(56, 56, 56);
+}
+
+.materia-info p{
+    color: rgb(78, 78, 78);
+    padding:10px 0;
+}
+
+
+
+
+
+/* AULAS */
+
+.aulas{
+    width: 100%;
+    padding: 40px 0;
+    position: relative;
+}
+
+.aula-conteudo{
+    width: calc(100% - 380px);
+}
+
+.aula-video-wrap{
+    border-bottom: 2px solid var(--titulo-opacity);
+}
+
+.aula-video iframe{
+    max-width: 100%;
+}
+
+.aula-conteudo h1{
+    font-size: 1.8rem;
+    padding:7px 0;
+}
+
+.aula-video-opsoes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 740px;
+    margin: 0 auto;
+}
+
+.aula-video-reacao{
+    display: flex;
+    justify-content: space-between;
+    min-width: 180px;
+}
+
+.aula-video-opsoes button{
+    background-color: transparent;
+    border: 0;
+    font-size:22px;
+    margin: 8px;
+    color: var(--titulo-opacity);
+    font-weight:lighter;
+}
+
+
+.aula-video-reacao span{
+    font-size: 18px;
+}
+
+.aula-video-opsoes button svg:hover{
+    transform: scale(1.08);
+}
+
+/* AULAS ASIDE */
+
+.all-aulas{
+    width: 350px;
+    border: 2px outset var(--titulo-opacity);
+    position: absolute;
+    right: 0;
+    top: 40px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    overflow:hidden;
+}
+
+
+
+.all-aulas h1{
+    font-size:28px;
+    color: rgb(39, 39, 39);
+}
+
+.all-aulas p{
+    font-size:17px;
+    color: rgb(80, 80, 80);
+    padding-bottom:5px;
+}
+
+.all-aulas p span{
+    font-weight: bolder;
+}
+
+.all-aula-wrap{
+    border: 1px outset #51006a48;
+    padding: 10px;
+    height: 100%;
+    overflow:auto;
+    border-radius:8px;
+}
+
+.all-aula-wrap::-webkit-scrollbar-track {
+    background-color: white;
+}
+.all-aula-wrap::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+    border: 1px solid var(--titulo-opacity);
+}
+.all-aula-wrap::-webkit-scrollbar-thumb {
+    background: #838383;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid var(--titulo-opacity);
+}
+
+.all-aulas-single a{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    border-bottom:1px solid #ccc;
+}
+
+.all-aulas-single a:hover{
+    text-decoration: underline;
+}
+
+.all-aulas-single img{
+    width: 120px;
+    max-height: 60px;
+    margin-right: 5px;
+    border: 2px solid rgb(126, 126, 126);
+}
+
+/* COMENTARIOS */
+
+.comments{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(90, 38, 187, 0.315);
+    z-index: 99;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display:none;
+}
+
+.comments-wrap{
+    position: absolute;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color: white;
+    max-width: 600px;
+    padding:15px;
+    border-radius: 10px;
+}
+
+.comments-wrap h1{
+    font-size:25px;
+    padding:3px 0;
+}
+
+
+.comentarios{
+    max-height: 300px;
+    overflow:auto;
+}
+
+.comments-single{
+    background-color:rgb(231, 231, 231);
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.comments-single h4{
+    color: var(--titulo);
+    font-size:18px;
+    padding:5px 10px;
+}
+
+.comments-single p{
+    color: rgb(27, 27, 27);
+    font-size:16px;
+    padding:0 20px;
+    font-weight: 600;
+}
+
+.comments form{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.comments form textarea{
+    width: 100%;
+    border: 1px solid var(--titulo-opacity);
+    height:70px;
+    font-size:16px;
+    font-weight:border;
+    color: rgb(27, 27, 27);
+    border-radius: 5px;
+    padding: 5px;
+    outline: 0;
+    resize: none;
+}
+
+.comments form button{
+    padding:4px 20px;
+    background-color: var(--save);
+    color: white;
+    font-size:20px;
+    font-weight:bolder;
+    border: 0;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.comments form button:hover{
+    background-color: var(--save-hover);
+}
+
+
+/* NOVA AULA */
+
+.nova-aula{
+    margin-top: 50px;
+}
+
+.nova-aula-buttons button{
+    /* margin-top: 15px; */
+    border:0;
+    padding: 10px 25px;
+    background-color: var(--save);
+    font-size:22px;
+    color:white;
+    margin:10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.nova-aula-buttons button:nth-of-type(2){
+    background-color: var(--input-border);
+}
+
+.nova-aula-buttons button:nth-of-type(2):hover{
+    background-color: var(--input-border-hover);
+}
+
+.nova-aula-buttons button:hover{
+    background-color: var(--save-hover);
+}
+
+.nova-aula-buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+    .aula-conteudo{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .all-aulas{
+        width: 100%;
+        position: initial;
+        max-height: 400px;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .perfil-chamada h1{
+        font-size:2.1rem;
+    }
+    
+    .perfil-chamada p{
+        font-size:1.4rem;
+    }
+
+
+}
+
+@media screen and (max-width: 500px){
+    .area-ver-mais{
+        padding:10px 20px;
+    }
+
+    .areas-warp .materia{
+        width: 240px !important;
+        height: 120px;
+    }
+
+    .perfil-chamada h1{
+        font-size:1.6rem;
+    }
+    
+    .perfil-chamada p{
+        font-size:1.1rem;
+    }
+
+    .info-user-single h3{
+        font-size:1.5rem;
+        text-align: left;
+    }
+    
+    .info-user-single p{
+        font-size:1.4rem;
+        min-width: 300px;
+        text-align: left;
+        border-bottom: 1px solid;
+    }
+    
+    .info-user-single{
+        width: 100%;
+        max-width:300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 390px){
+
+    .areas-warp .materia{
+        width: 180px !important;
+        height: 120px;
+    }
+
+}
