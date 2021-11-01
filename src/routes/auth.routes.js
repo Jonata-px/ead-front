@@ -1,5 +1,5 @@
 import React from 'react';
-import SignIn from '../pages/logged/SignIn';
+import SignIn from '../pages/login/SignIn';
 import {
     Switch,
     Route

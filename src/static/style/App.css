@@ -170,6 +170,32 @@
 .area-aluno-perfil .perfil-img{
     margin-right: 40px;
     border-radius: 50%;
+    position: relative;
+}
+
+.perfil-img .edit-perfil-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.perfil-img:hover .edit-perfil-img{
+    opacity: 0.8;
+}
+
+.area-aluno-perfil .perfil-img .edit-perfil-img svg{
+    font-size: 50px;
+    color:#5a26bb;
 }
 
 .area-aluno-perfil .perfil-img img{

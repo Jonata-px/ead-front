@@ -1,17 +1,32 @@
 
-import React, {useEffect} from 'react';
-import {FaUserCircle} from 'react-icons/fa';
+import React, {useState} from 'react';
+import {FaUserCircle, FaCamera} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 
 
 export default function AreaUser() {
     var user = {pro:true};
 
+    // const [file, setFile] = useState({});
+
+    const attPerfil = (e)=>{
+        var data = new FormData();
+        data.append('file',e.target.files[0]);
+        // console.log(data)
+        // var res = await Globais.REQUEST('newProduct',data,{});
+    }
+
     return (
        <div className="container">
 
         <section className="area-aluno-perfil">
             <div className="perfil-img">
+                <div className="edit-perfil-img">
+                    <form>
+                        <label htmlFor="perfil"><FaCamera/> </label>
+                        <input onChange={(e)=>attPerfil(e)} id="perfil" style={{display:"none"}} type="file" />
+                    </form>
+                </div>
                 {
                     user.imagem?
                         <img src="" alt="user" />
