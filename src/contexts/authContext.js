@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import { authApiConfig, login } from '../services/authAxios'
+import login from '../services/login';
 
 const authContextData = {
     signed: Boolean,
@@ -26,33 +26,36 @@ export const AuthProvider = ({ children }) => {
 
                 if (storagedUser && storagedToken) {
                     console.log(storagedUser)
-                    authApiConfig.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
+                    //authApiConfig.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
                     setUser(storagedUser);
                 }
                 setLoading(false);
             } catch (error) {
-                console.log(error)
+                console.log("storage error:"+ error)
             }
         }
         loadStorageData();
     }, []);
 
-    async function signIn(paramEmail, paramPassword) {
-        try {
+    function signIn(paramEmail, paramPassword) {
+        return new Promise(async(resolve, reject)=> {
             setLoading(true);
+            const info = await login(paramEmail,paramPassword).catch((err)=>{return err;});
+            if(!info.error){
+                console.log(info);
+                //authApiConfig.defaults.headers['Authorization'] = `Bearer ${token}`;
+                setUser(info.userInfo);
+                await window.localStorage.setItem("@Auth:user", info.userInfo); //RN
+                await window.localStorage.setItem("@Auth:token", info.token); //RN
 
-            const { message, token } = await login(paramEmail, paramPassword);
-            console.log(message);
-            authApiConfig.defaults.headers['Authorization'] = `Bearer ${token}`;
+                setLoading(false);
+                resolve();
+            }else{
+                setLoading(false);
+                reject(info.error);
+            }
 
-            setUser(message);
-            await window.localStorage.setItem("@Auth:user", message); //RN
-            await window.localStorage.setItem("@Auth:token", token); //RN
-
-            setLoading(false);
-        } catch (error) {
-            console.log(error);
-        }
+        })
     }
 
     async function signOut() {
